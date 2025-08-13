@@ -20,7 +20,7 @@ const itemVariants = {
 
 const ProjectPage= () => {
   const {slug}=useParams<{ slug: string }>()
-  const project = Projects[Number(slug)-1]//projectsData["concordia-design-event"]
+  const project = Projects[Number(slug)-1] || Projects[12]//projectsData["concordia-design-event"]
   
   return (
     <>

@@ -287,5 +287,29 @@ export const Projects: Project[]  =[
         "Brand-aligned typography and layout for ad use."
       ]
     }
+  },
+  {
+    slug: "saudi-2025-identity-formula-e-rice",
+    title: "Saudi 2025 - Identity Design for Formula E Race",
+    subtitle: "Identity Design",
+    location: "Saudi",
+    year: "2025",
+    heroImage: "/p1401.png",
+    imgs: ["/p1402.png","/p1403.png","/p1404.png"],
+    intro:
+      "Designing the identity for the champion Formula E race in Jeddah, Saudi Arabia. The Jeddah ePrix is a single-seater, electrically powered Formula E championship event held in Jeddah as part of the 2024–25 season, featuring a shortened circuit and distinctive branding elements inspired by speed, technology, and modern urban settings.",
+    details: {
+      "Target Audience": [
+        "Motor sport enthusiasts.",
+        "Sponsors and partners of Formula E.",
+        "Event attendees and broadcast audiences."
+      ],
+      "Scope of works": [
+        "Logo concept and branding system for the race.",
+        "Circuit branding, signage, and wayfinding.",
+        "Digital and print collateral (posters, programs, social assets).",
+        "Merchandise branding and typography guidelines."
+      ]
+    }
   }
 ]

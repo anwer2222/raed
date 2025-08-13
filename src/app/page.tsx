@@ -32,10 +32,10 @@ export default function Home() {
                   Creative Work & Studio
                 </h1>
                 <p className="text-lg text-gray-600 mb-6">
-                  A portfolio showing selected projects - Luxury Accessories Photography
+                  A portfolio showing selected projects - Design for Formula E Race
                 </p>
                 <div className="flex gap-4">
-                  <Link className="inline-block px-6 py-3 bg-black text-white rounded-full text-sm" href="/projects/13">
+                  <Link className="inline-block px-6 py-3 bg-black text-white rounded-full text-sm" href="/projects/14">
                     View Projects
                   </Link>
                   <Link className="inline-block px-6 py-3 border border-gray-200 rounded-full text-sm" href="/about">
@@ -46,7 +46,7 @@ export default function Home() {
 
               <div className="rounded-lg overflow-hidden">
                 <motion.img
-                  src="/p1301.png"
+                  src="/p1401.png"
                   alt="Hero"
                   className="w-full h-80 object-cover rounded-lg"
                   initial={{ scale: 1.02 }}
