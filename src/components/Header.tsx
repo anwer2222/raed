@@ -2,17 +2,23 @@
 import Link from "next/link";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import NavbarSidebar from "./Navbar";
+import { Button } from "./ui/button";
+import { MenuIcon } from "lucide-react";
 
 const navItems = [
   { label: "/ WORK", href: "/" },
-  { label: "/ STUDIO", href: "/studio" },
+  // { label: "/ STUDIO", href: "/studio" },
   { label: "/ ABOUT", href: "/about" },
   { label: "/ CONTACT", href: "/contact" },
-  { label: "Blog", href: "/blog" }
+  // { label: "Blog", href: "/blog" }
 ];
 
 export default function Header() {
   const [query, setQuery] = useState("");
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
   return (
     <motion.header
       initial={{ y: -20, opacity: 0 }}
@@ -23,11 +29,11 @@ export default function Header() {
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-30">
             <Link href="/" className="flex items-center gap-3">
               
                 {/* Replace with Next Image or your logo */}
-                <img src="/raed_logo.png" alt="logo" className="w-32 h-auto object-contain" />
+                <Image src="/raed_logo.png" alt="logo" className="w-32 h-auto object-contain" width={100} height={100}/>
              
             </Link>
 
@@ -55,6 +61,22 @@ export default function Header() {
               />
             </form>
           </div>
+          <div className='hidden lg:block'>
+            {/* <Form/> */}
+            
+            {/* Buy Now Button */}
+            <NavbarSidebar open={isSidebarOpen} onOpenChange={setIsSidebarOpen}/>
+          </div>
+          <div className="flex lg:hidden items-center justify-center">
+            <Button
+              variant="link"
+              className="size-12 border-transparent text-black"
+              onClick={() => setIsSidebarOpen(true)}
+              >
+                <MenuIcon/>
+            </Button>
+
+           </div>
         </div>
       </div>
     </motion.header>

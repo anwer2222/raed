@@ -1,10 +1,8 @@
 "use client"
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
-function isEven(n) {
-  return n % 2 == 0;
-}
 const y=[3,4,5]
 const images = Array.from({ length: 12 }).map((_, i) => ({
   id: i,
@@ -51,7 +49,7 @@ export default function Gallery() {
             className="rounded-lg overflow-hidden bg-gray-100"
           >
             <Link href={`/projects/${img.id}`}>
-            <img src={img.src} alt={img.alt} className="w-full h-56 object-cover" loading="lazy" />
+            <Image src={img.src} alt={img.alt} className="w-full h-56 object-cover" loading="lazy" width={300} height={300} />
             <figcaption className="p-3 text-sm text-gray-700">{img.alt}</figcaption>
             </Link>
           </motion.figure>

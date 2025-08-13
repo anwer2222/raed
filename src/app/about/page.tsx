@@ -2,6 +2,7 @@
 import Link from "next/link";
 import type { NextPage } from "next";
 import { motion } from "framer-motion";
+import Image from "next/image"
 // import Header from "@/components/Header";
 // import Footer from "@/components/Footer";
 
@@ -30,12 +31,12 @@ const About: NextPage = () => {
             <motion.header variants={item} className="lg:col-span-2">
               <p className="text-sm text-gray-500 mb-2">ABOUT</p>
               <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
-                Hello — I'm RAED
+                Hello — I&apos;m RAED
               </h1>
 
               <div className="mt-6 space-y-4 text-gray-700 text-lg leading-relaxed">
                 <p>
-                  Design director with over a decade of experience, I've woven a tapestry of
+                  Design director with over a decade of experience, I&apos;ve woven a tapestry of
                   creativity and expertise.
                 </p>
 
@@ -52,13 +53,13 @@ const About: NextPage = () => {
                 </p>
 
                 <p>
-                  Collaborating with industry leaders in renowned design studios, I've
+                  Collaborating with industry leaders in renowned design studios, I&apos;ve
                   transformed countless concepts into compelling visuals, embracing the fusion of
                   design principles, artistic intuition, and technological finesse.
                 </p>
 
                 <p>
-                  My portfolio is more than visual — it's a narrative of passion, dedication,
+                  My portfolio is more than visual — it&apos;s a narrative of passion, dedication,
                   and an unwavering commitment to turning ordinary concepts into extraordinary
                   visual stories.
                 </p>
@@ -80,7 +81,7 @@ const About: NextPage = () => {
 
             <aside className="lg:col-span-1">
               <motion.div variants={item} className="sticky top-28 space-y-6">
-              <img src="/R.png" alt="read" className="w-auto h-auto object-contain" />
+              <Image src="/R.png" alt="read" className="w-auto h-auto object-contain" height={300} width={300}/>
                 <div className="bg-gray-50 border border-gray-100 rounded-lg p-5">
                   <h3 className="text-sm font-semibold text-gray-800 mb-2">Role</h3>
                   <p className="text-sm text-gray-700">Design Director</p>

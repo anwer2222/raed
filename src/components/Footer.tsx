@@ -1,6 +1,7 @@
 "use client"
 import { motion } from "framer-motion";
 import Image from 'next/image'
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -9,19 +10,18 @@ export default function Footer() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
-      className="pt-15 border-t border-gray-200 flex justify-center items-center flex-col"
+      className="pt-15 border-t border-gray-200 flex justify-center items-center flex-col bg-black"
       role="contentinfo"
     >
-        {/* <image src="/read_logo.png" alt="" height={300} width={300}/> */}
-        <img src="/raed_logo_w.png" alt="logo" className="w-32 h-auto object-contain" />
+
+        <Image src="/raed_logo_w.png" alt="logo" className="w-32 h-auto object-contain" width={300} height={300}/>
       <div className="max-w-6xl mx-auto px-4 py-8 text-center">
         <nav aria-label="Footer" className="mb-3">
           <ul className="flex justify-center gap-6 text-sm text-gray-600">
-            <li>/ WORK</li>
-            <li>/ STUDIO</li>
-            <li>/ ABOUT</li>
-            <li>/ CONTACT</li>
-            <li>Blog</li>
+            <Link href="\"><li>/ WORK</li></Link>
+            {/* <Link href="\studio"><li>/ STUDIO</li></Link> */}
+            <Link href="\about"><li>/ ABOUT</li></Link>
+            <Link href="\contact"><li>/ CONTACT</li></Link>
           </ul>
         </nav>
         <p className="text-sm text-gray-500">© 2025 All rights reserved RaedAbbad</p>

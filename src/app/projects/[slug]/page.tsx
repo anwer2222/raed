@@ -2,73 +2,11 @@
 
 import Head from "next/head";
 import Link from "next/link";
-// import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { motion } from "framer-motion";
-import { NextPage } from "next";
+import { useParams } from 'next/navigation'
+import {Projects} from "@/seed"
+import Image from "next/image"
 
-type Project = {
-  slug: string;
-  title: string;
-  subtitle: string;
-  location?: string;
-  year?: string;
-  heroImage?: string;
-  intro: string;
-  details: {
-    "Target Audience": string[];
-    "Scope of works": string[];
-  };
-};
-
-type Props = {
-  project: Project;
-};
-
-const projectsData: Record<string, Project> = {
-  "concordia-design-event": {
-    slug: "concordia-design-event",
-    title: "Concordia Design Event - Canada",
-    subtitle: "Identity Design",
-    location: "Canada",
-    year: "2016",
-    heroImage: "https://picsum.photos/1200/700?random=11",
-    intro:
-      "The objective of the event seeks to bring together the thinkers and doers that are breaking ground and the shaping of new standards in media and design.",
-    details: {
-      "Target Audience": ["Students of Art and design.", "Professional Designers."],
-      "Scope of works": [
-        "Event identity elements.",
-        "Event poster and banner.",
-        "Event invitation card & certificates.",
-      ],
-    },
-  },
-
-  // You can add more project objects here keyed by slug
-};
-
-// export const getStaticPaths: GetStaticPaths = async () => {
-//   const slugs = Object.keys(projectsData);
-//   const paths = slugs.map((slug) => ({ params: { slug } }));
-
-//   return {
-//     paths,
-//     fallback: false, // change to 'blocking' if you want dynamic behavior later
-//   };
-// };
-
-// export const getStaticProps: GetStaticProps<Props> = async (context) => {
-//   const slug = context.params?.slug as string;
-//   const project = projectsData[slug];
-
-//   if (!project) {
-//     return { notFound: true };
-//   }
-
-//   return {
-//     props: { project },
-//   };
-// };
 
 const containerVariants = {
   hidden: { opacity: 0, y: 8 },
@@ -80,8 +18,10 @@ const itemVariants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.4 } },
 };
 
-const ProjectPage: NextPage<Props> = () => {
-  const project = projectsData["concordia-design-event"]
+const ProjectPage= () => {
+  const {slug}=useParams<{ slug: string }>()
+  const project = Projects[Number(slug)-1]//projectsData["concordia-design-event"]
+  
   return (
     <>
       <Head>
@@ -101,7 +41,7 @@ const ProjectPage: NextPage<Props> = () => {
                 </li>
                 <li>/</li>
                 <li>
-                  <Link href="/#projects">
+                  <Link href="/">
                     <p className="hover:underline">Work</p>
                   </Link>
                 </li>
@@ -110,7 +50,7 @@ const ProjectPage: NextPage<Props> = () => {
               </ol>
             </nav>
 
-            <Link href="/#projects">
+            <Link href="/" className="hidden md:block">
               <p className="text-sm px-3 py-2 border border-gray-200 rounded-full text-gray-700 hover:bg-gray-50">
                 Back to work
               </p>
@@ -135,7 +75,7 @@ const ProjectPage: NextPage<Props> = () => {
               <motion.img
                 src={project.heroImage}
                 alt={project.title}
-                className="w-full h-72 md:h-96 object-cover rounded-lg shadow-sm"
+                className="w-full h-auto object-cover rounded-lg shadow-sm"
                 initial={{ scale: 1.02, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.8 }}
@@ -215,19 +155,21 @@ const ProjectPage: NextPage<Props> = () => {
             className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6"
           >
             {/* Example project image gallery / extras */}
-            {Array.from({ length: 3 }).map((_, i) => (
+            {project.imgs.map((img, i) => (
               <motion.figure
                 key={i}
                 variants={itemVariants}
                 whileHover={{ scale: 1.03 }}
                 className="col-span-1 rounded-lg overflow-hidden bg-gray-100"
               >
-                <img
-                  src={`https://picsum.photos/900/600?random=${20 + i}`}
+                <Image 
+                  src={img}
                   alt={`${project.title} image ${i + 1}`}
                   className="w-full h-56 object-cover"
+                  width={300}
+                  height={300}
                 />
-                <figcaption className="p-3 text-sm text-gray-700">Gallery image {i + 1}</figcaption>
+                <div className="p-3 text-sm text-gray-700">Gallery image {i + 1}</div>
               </motion.figure>
             ))}
           </motion.section>
