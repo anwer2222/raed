@@ -89,7 +89,7 @@ export default function Home() {
                   </motion.div>
                 </Link>
 
-                <Link href="/about">
+                {/* <Link href="/about">
                   <motion.div
                     // Button Lift Effect
                     whileHover={{
@@ -102,7 +102,7 @@ export default function Home() {
                   >
                     About
                   </motion.div>
-                </Link>
+                </Link> */}
               </motion.div>
             </motion.div>
 
