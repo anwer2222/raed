@@ -78,19 +78,19 @@ export default function Home() {
                 variants={itemVariants}
                 className="flex flex-wrap gap-4"
               >
-                <Link href="/projects/14" passHref legacyBehavior>
-                  <motion.a
+                <Link href="/projects/14">
+                  <motion.div
                     // Button Lift Effect
                     whileHover={{ y: -4, scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="cursor-pointer inline-flex px-8 py-3.5 bg-gray-900 text-white rounded-full text-sm font-medium transition-colors hover:bg-black shadow-lg"
                   >
                     View Projects
-                  </motion.a>
+                  </motion.div>
                 </Link>
 
-                <Link href="/about" passHref legacyBehavior>
-                  <motion.a
+                <Link href="/about">
+                  <motion.div
                     // Button Lift Effect
                     whileHover={{
                       y: -4,
@@ -101,7 +101,7 @@ export default function Home() {
                     className="cursor-pointer inline-flex px-8 py-3.5 border border-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors shadow-sm"
                   >
                     About
-                  </motion.a>
+                  </motion.div>
                 </Link>
               </motion.div>
             </motion.div>
