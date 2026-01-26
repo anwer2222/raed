@@ -9,9 +9,9 @@ import { Projects } from '@/seed'
 // Note: We use the heights you provided to maintain the "Dense Center" look
 const leftImages = [
   {
-    id: '1',
-    src: Projects[0].heroImage,
-    alt: Projects[0].title,
+    id: '18',
+    src: Projects[17].heroImage,
+    alt: Projects[17].title,
     height: 'h-[450px]',
   },
   {
@@ -82,9 +82,9 @@ const centerImages = [
 
 const rightImages = [
   {
-    id: '18',
-    src: Projects[17].heroImage,
-    alt: Projects[17].title,
+    id: '1',
+    src: Projects[0].heroImage,
+    alt: Projects[0].title,
     height: 'h-[450px]',
   },
   {

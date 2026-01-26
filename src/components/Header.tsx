@@ -10,7 +10,7 @@ import { MenuIcon } from "lucide-react";
 const navItems = [
   { label: "/ WORK", href: "/" },
   // { label: "/ STUDIO", href: "/studio" },
-  { label: "/ ABOUT", href: "/about" },
+  // { label: "/ ABOUT", href: "/about" },
   { label: "/ CONTACT", href: "/contact" },
   // { label: "Blog", href: "/blog" }
 ];
@@ -33,7 +33,7 @@ export default function Header() {
             <Link href="/" className="flex items-center gap-3">
               
                 {/* Replace with Next Image or your logo */}
-                <Image src="/raed_logo.png" alt="logo" className="w-32 h-auto object-contain" width={100} height={100}/>
+                <Image src="/dm_logo.png" alt="logo" className="w-32 h-auto object-contain" width={100} height={100}/>
              
             </Link>
 

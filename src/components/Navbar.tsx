@@ -24,10 +24,10 @@ const NavbarSidebar = ({ open,onOpenChange} : Props) => {
         //     href: "/#section-features",
         //     children: "Features"
         // },
-        {
-            href: "/about",
-            children: "About"
-        },
+        // {
+        //     href: "/about",
+        //     children: "About"
+        // },
         {
             href: "/contact",
             children: "Contact"
@@ -41,7 +41,7 @@ const NavbarSidebar = ({ open,onOpenChange} : Props) => {
           className="p-0 transition-none bg-white/60 backdrop-blur-sm border-b border-gray-200"
           >
           <SheetHeader className="p-4 border-b items-center justify-center">
-            <Image src="/raed_logo.png" width={150} height={150} alt="" className=" my-[50px]"/>
+            <Image src="/dm_logo.png" width={150} height={150} alt="" className=" my-[50px]"/>
           <div className="flex items-center">
               <SheetTitle className="text-black">
                 Menu

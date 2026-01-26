@@ -14,13 +14,13 @@ export default function Footer() {
       role="contentinfo"
     >
 
-        <Image src="/raed_logo_w.png" alt="logo" className="w-32 h-auto object-contain" width={300} height={300}/>
+        <Image src="/dm_logo_w.png" alt="logo" className="w-32 h-auto object-contain" width={300} height={300}/>
       <div className="max-w-6xl mx-auto px-4 py-8 text-center">
         <nav aria-label="Footer" className="mb-3">
           <ul className="flex justify-center gap-6 text-sm text-gray-600">
             <Link href="\"><li>/ WORK</li></Link>
             {/* <Link href="\studio"><li>/ STUDIO</li></Link> */}
-            <Link href="\about"><li>/ ABOUT</li></Link>
+            {/* <Link href="\about"><li>/ ABOUT</li></Link> */}
             <Link href="\contact"><li>/ CONTACT</li></Link>
           </ul>
         </nav>
