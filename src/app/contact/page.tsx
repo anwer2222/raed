@@ -49,7 +49,8 @@ const Form = () => {
               <div>
                 <div></div>
                 <div className="flex items-center justify-center pb-12">
-                  <Image src="/dm_logo.png" alt="" width={300} height={100} />
+                  {/* <Image src="/dm_logo.png" alt="" width={300} height={100} /> */}
+                  <Image src="/raed_logo.png" alt="" width={300} height={100} />
                 </div>
               </div>
               <div className="grid gap-4">

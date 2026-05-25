@@ -78,7 +78,8 @@ const Form = ( {
               <DialogHeader>
                 <DialogTitle></DialogTitle>
                 <DialogDescription className="flex items-center justify-center pb-12">
-                  <Image src="/dreptec_logo.png" alt="" width={300} height={100} />
+                  {/* <Image src="/dm_logo.png" alt="" width={300} height={100} /> */}
+                  <Image src="/raed_logo.png" alt="" width={300} height={100} />
                 </DialogDescription>
               </DialogHeader>
               <div className="grid gap-4">
